@@ -32,7 +32,7 @@ col_left, col_right = st.columns([3,1])
 with col_left:
     st.markdown("""
     <div style='margin-bottom:30px; font-size:30px;'>
-        <b>Nome Dinaldo Jorge</b>
+        <b>Nome Cleyton Silva</b>
     </div>
     """, unsafe_allow_html=True)
 
@@ -63,16 +63,13 @@ with col_left:
             width: 100%;
             max-width: none;
         ">
-            <b>Sobre Dinaldo:<br>
-            Dinaldo Jorge, 49 anos, é um profissional experiente na área de sistemas de telecomunicações,
-            destacando-se pela sólida formação técnica e expertise em infraestrutura de rede, conectividade
-            e suporte de TI.Com vasta vivência no mercado, busca posições que exijam soluções inovadoras em
-            redes, segurança digital e administração de sistemas.
+            <b>Sobre Cleyton:<br>
+          Olá,meu nome é Cleyton, sou da cidade de Gurinhém PB, tenho 18 anos e estou no terceiro ano do curso de Informática do IFPB Campus Itabaiana.
         </div>
         """, unsafe_allow_html=True)
 
     st.markdown("<div style='margin-top:30px;'>", unsafe_allow_html=True)
-    st.link_button("Acessar", "http://lattes.cnpq.br/4494611683890258")
+    st.link_button("Acessar", "https://sites.google.com/academico.ifpb.edu.br/cleyton-alves-da-silva/in%C3%ADcio")
     st.markdown("</div>", unsafe_allow_html=True)
 
 with col_right:
