@@ -18,7 +18,7 @@ col1, col2, col3 = st.columns([1,2,1])
 with col2:
     st.markdown(f"""
         <div style="text-align: center; margin-bottom: 50px;">
-            <a href="https://starlink.com/" target="_blank">
+            <a href="https://www.google.com/url?sa=i&source=web&rct=j&url=https://www.google.com/?hl%3Dpt_BR&ved=2ahUKEwiut5LzxbaUAxUjgWEGHShuGCsQy_kOegoIAggACAEIBRAC&opi=89978449&cd&psig=AOvVaw3Bsg2sss2Nx2vVUr8WJREI&ust=1778771379879000" target="_blank">
                 <img src="data:image/png;base64,{img_base64}" 
                      width="320" 
                      style="border-radius:12px;">
