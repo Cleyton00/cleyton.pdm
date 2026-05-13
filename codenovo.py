@@ -49,7 +49,7 @@ with col_left:
         ">
         """, unsafe_allow_html=True)
 
-        st.image("dino2026.png", width=800)
+        st.image("WhatsApp Image 2026-04-15 at 11.17.27 AM.png", width=800)
 
         st.markdown("</div>", unsafe_allow_html=True)
 
