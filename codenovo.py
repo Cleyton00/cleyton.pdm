@@ -76,15 +76,19 @@ with col_left:
 
 with col_right:
     st.empty()
-
 # ==================================================
-# NOVA SEÇÃO - 3 LINKS COM IMAGENS
+# SEÇÃO - SITES PARCEIROS
 # ==================================================
-
 st.markdown("""
-    <hr style="margin-top:50px; margin-bottom:40px;">
-    <h2 style='text-align:center;'>
-        Meus Sites Favoritos
+    <hr style="margin-top:50px; margin-bottom:30px;">
+
+    <h2 style='
+        text-align:center;
+        font-size:38px;
+        color:#333;
+        margin-bottom:40px;
+    '>
+        Sites Parceiros
     </h2>
 """, unsafe_allow_html=True)
 
@@ -93,12 +97,29 @@ link1, link2, link3 = st.columns(3)
 # ================= LINK 1 =================
 with link1:
 
-    st.image("image_ifood.png", width=250)
+    st.markdown("""
+        <div style="text-align:center;">
+            <img src="data:image/png;base64,{}"
+                 style="
+                    width:250px;
+                    height:180px;
+                    object-fit:cover;
+                    border-radius:12px;
+                 ">
+        </div>
+    """.format(get_base64_image("image_ifood.png")),
+    unsafe_allow_html=True)
 
     st.markdown("""
-        <div style="text-align:center; margin-top:10px;">
-            <a href="https://portal.ifood.com.br/login" target="_blank">
-                Clique para acessar o Site 1
+        <div style="text-align:center; margin-top:15px;">
+            <a href="https://portal.ifood.com.br/login"
+               target="_blank"
+               style="
+                    font-size:20px;
+                    text-decoration:none;
+                    font-weight:bold;
+               ">
+                Acessar iFood
             </a>
         </div>
     """, unsafe_allow_html=True)
@@ -106,12 +127,29 @@ with link1:
 # ================= LINK 2 =================
 with link2:
 
-    st.image("image_facebook.jpg", width=250)
+    st.markdown("""
+        <div style="text-align:center;">
+            <img src="data:image/png;base64,{}"
+                 style="
+                    width:250px;
+                    height:180px;
+                    object-fit:cover;
+                    border-radius:12px;
+                 ">
+        </div>
+    """.format(get_base64_image("image_facebook.jpg")),
+    unsafe_allow_html=True)
 
     st.markdown("""
-        <div style="text-align:center; margin-top:10px;">
-            <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
-                Clique para acessar o Site 2
+        <div style="text-align:center; margin-top:15px;">
+            <a href="https://www.facebook.com/?locale=pt_BR"
+               target="_blank"
+               style="
+                    font-size:20px;
+                    text-decoration:none;
+                    font-weight:bold;
+               ">
+                Acessar Facebook
             </a>
         </div>
     """, unsafe_allow_html=True)
@@ -119,12 +157,29 @@ with link2:
 # ================= LINK 3 =================
 with link3:
 
-    st.image("image_netflix.jpg", width=250)
+    st.markdown("""
+        <div style="text-align:center;">
+            <img src="data:image/png;base64,{}"
+                 style="
+                    width:250px;
+                    height:180px;
+                    object-fit:cover;
+                    border-radius:12px;
+                 ">
+        </div>
+    """.format(get_base64_image("image_netflix.jpg")),
+    unsafe_allow_html=True)
 
     st.markdown("""
-        <div style="text-align:center; margin-top:10px;">
-            <a href="https://www.netflix.com/br/" target="_blank">
-                Clique para acessar o Site 3
+        <div style="text-align:center; margin-top:15px;">
+            <a href="https://www.netflix.com/br/"
+               target="_blank"
+               style="
+                    font-size:20px;
+                    text-decoration:none;
+                    font-weight:bold;
+               ">
+                Acessar Netflix
             </a>
         </div>
     """, unsafe_allow_html=True)
