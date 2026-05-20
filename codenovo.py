@@ -99,16 +99,6 @@ link1, link2, link3 = st.columns(3)
 with link1:
 
     st.markdown("""
-        <div style="
-            text-align:center;
-            padding:20px;
-            border-radius:15px;
-            box-shadow:0px 0px 10px rgba(0,0,0,0.1);
-            background-color:#fafafa;
-        ">
-    """, unsafe_allow_html=True)
-
-    st.markdown("""
         <div style="text-align:center;">
             <img src="data:image/png;base64,{}"
                  style="
@@ -155,16 +145,6 @@ with link1:
 with link2:
 
     st.markdown("""
-        <div style="
-            text-align:center;
-            padding:20px;
-            border-radius:15px;
-            box-shadow:0px 0px 10px rgba(0,0,0,0.1);
-            background-color:#fafafa;
-        ">
-    """, unsafe_allow_html=True)
-
-    st.markdown("""
         <div style="text-align:center;">
             <img src="data:image/png;base64,{}"
                  style="
@@ -209,15 +189,6 @@ with link2:
 # ================= LINK 3 =================
 with link3:
 
-    st.markdown("""
-        <div style="
-            text-align:center;
-            padding:20px;
-            border-radius:15px;
-            box-shadow:0px 0px 10px rgba(0,0,0,0.1);
-            background-color:#fafafa;
-        ">
-    """, unsafe_allow_html=True)
 
     st.markdown("""
         <div style="text-align:center;">
