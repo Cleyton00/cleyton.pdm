@@ -76,6 +76,7 @@ with col_left:
 
 with col_right:
     st.empty()
+
 # ==================================================
 # SEÇÃO - SITES PARCEIROS
 # ==================================================
@@ -98,6 +99,16 @@ link1, link2, link3 = st.columns(3)
 with link1:
 
     st.markdown("""
+        <div style="
+            text-align:center;
+            padding:20px;
+            border-radius:15px;
+            box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+            background-color:#fafafa;
+        ">
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
         <div style="text-align:center;">
             <img src="data:image/png;base64,{}"
                  style="
@@ -111,6 +122,20 @@ with link1:
     unsafe_allow_html=True)
 
     st.markdown("""
+        <h3 style="text-align:center; margin-top:15px;">
+            iFood
+        </h3>
+
+        <p style="
+            text-align:justify;
+            font-size:16px;
+            line-height:1.6;
+        ">
+            O iFood é uma plataforma de delivery que conecta
+            restaurantes, mercados e consumidores, permitindo
+            pedidos online de forma rápida e prática.
+        </p>
+
         <div style="text-align:center; margin-top:15px;">
             <a href="https://portal.ifood.com.br/login"
                target="_blank"
@@ -124,8 +149,20 @@ with link1:
         </div>
     """, unsafe_allow_html=True)
 
+    st.markdown("</div>", unsafe_allow_html=True)
+
 # ================= LINK 2 =================
 with link2:
+
+    st.markdown("""
+        <div style="
+            text-align:center;
+            padding:20px;
+            border-radius:15px;
+            box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+            background-color:#fafafa;
+        ">
+    """, unsafe_allow_html=True)
 
     st.markdown("""
         <div style="text-align:center;">
@@ -141,6 +178,19 @@ with link2:
     unsafe_allow_html=True)
 
     st.markdown("""
+        <h3 style="text-align:center; margin-top:15px;">
+            Facebook
+        </h3>
+
+        <p style="
+            text-align:justify;
+            font-size:16px;
+            line-height:1.6;
+        ">
+            O Facebook é uma rede social utilizada para compartilhar
+            fotos, vídeos, notícias e interagir com pessoas do mundo todo.
+        </p>
+
         <div style="text-align:center; margin-top:15px;">
             <a href="https://www.facebook.com/?locale=pt_BR"
                target="_blank"
@@ -154,8 +204,20 @@ with link2:
         </div>
     """, unsafe_allow_html=True)
 
+    st.markdown("</div>", unsafe_allow_html=True)
+
 # ================= LINK 3 =================
 with link3:
+
+    st.markdown("""
+        <div style="
+            text-align:center;
+            padding:20px;
+            border-radius:15px;
+            box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+            background-color:#fafafa;
+        ">
+    """, unsafe_allow_html=True)
 
     st.markdown("""
         <div style="text-align:center;">
@@ -171,6 +233,20 @@ with link3:
     unsafe_allow_html=True)
 
     st.markdown("""
+        <h3 style="text-align:center; margin-top:15px;">
+            Netflix
+        </h3>
+
+        <p style="
+            text-align:justify;
+            font-size:16px;
+            line-height:1.6;
+        ">
+            A Netflix é uma plataforma de streaming que oferece
+            filmes, séries, documentários e conteúdos exclusivos
+            para entretenimento online.
+        </p>
+
         <div style="text-align:center; margin-top:15px;">
             <a href="https://www.netflix.com/br/"
                target="_blank"
@@ -183,6 +259,8 @@ with link3:
             </a>
         </div>
     """, unsafe_allow_html=True)
+
+    st.markdown("</div>", unsafe_allow_html=True)
 
 # =========================
 # WHATSAPP
