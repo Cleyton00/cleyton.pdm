@@ -1,50 +1,55 @@
 import streamlit as st
 import base64
 
+# =====================================
 # CONFIG
+# =====================================
 st.set_page_config(page_title="Perfil", layout="wide")
 
-# FUNÇÃO base64
+# =====================================
+# FUNÇÃO BASE64
+# =====================================
 def get_base64_image(path):
     with open(path, "rb") as img_file:
         return base64.b64encode(img_file.read()).decode()
 
+# IMAGENS
 img_base64 = get_base64_image("2875404.png")
 zap_base64 = get_base64_image("images (1).jpeg")
 
-# =========================
-# TOPO (imagem clicável)
-# =========================
+# =====================================
+# TOPO
+# =====================================
 col1, col2, col3 = st.columns([1,2,1])
 
 with col2:
     st.markdown(f"""
-        <div style="text-align: center; margin-bottom: 50px;">
+        <div style="text-align:center; margin-bottom:50px;">
             <a href="https://www.google.com" target="_blank">
-                <img src="data:image/png;base64,{img_base64}" 
-                     width="320" 
+                <img src="data:image/png;base64,{img_base64}"
+                     width="320"
                      style="border-radius:12px;">
             </a>
         </div>
     """, unsafe_allow_html=True)
 
-# =========================
+# =====================================
 # LAYOUT PRINCIPAL
-# =========================
+# =====================================
 col_left, col_right = st.columns([3,1])
 
 with col_left:
 
     st.markdown("""
-    <div style='margin-bottom:30px; font-size:30px;'>
-        <b>Nome Cleyton Silva</b>
-    </div>
+        <div style='margin-bottom:30px; font-size:30px;'>
+            <b>Nome Cleyton Silva</b>
+        </div>
     """, unsafe_allow_html=True)
 
-    # subcolunas
+    # SUBCOLUNAS
     subcol1, subcol2 = st.columns([1,4])
 
-    # IMAGEM
+    # FOTO
     with subcol1:
         st.image(
             "WhatsApp Image 2026-04-15 at 11.17.27 AM.png",
@@ -54,17 +59,17 @@ with col_left:
     # TEXTO
     with subcol2:
         st.markdown("""
-        <div style="
-            text-align: justify;
-            font-size: 20px;
-            line-height: 2.0;
-        ">
-            <b>Sobre Cleyton:</b><br><br>
+            <div style="
+                text-align:justify;
+                font-size:20px;
+                line-height:2.0;
+            ">
+                <b>Sobre Cleyton:</b><br><br>
 
-            Olá, meu nome é Cleyton, sou da cidade de Gurinhém PB,
-            tenho 18 anos e estou no terceiro ano do curso de
-            Informática do IFPB Campus Itabaiana.
-        </div>
+                Olá, meu nome é Cleyton, sou da cidade de Gurinhém PB,
+                tenho 18 anos e estou no terceiro ano do curso de
+                Informática do IFPB Campus Itabaiana.
+            </div>
         """, unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
@@ -77,196 +82,209 @@ with col_left:
 with col_right:
     st.empty()
 
-# ==================================================
-# SEÇÃO - SITES PARCEIROS
-# ==================================================
+# =====================================
+# TÍTULO
+# =====================================
 st.markdown("""
     <hr style="margin-top:50px; margin-bottom:30px;">
 
-    <h2 style='
+    <h2 style="
         text-align:center;
         font-size:38px;
         color:#333;
         margin-bottom:40px;
-    '>
+    ">
         Sites Parceiros
     </h2>
 """, unsafe_allow_html=True)
 
+# =====================================
+# COLUNAS DOS CARDS
+# =====================================
 link1, link2, link3 = st.columns(3)
 
-# ================= LINK 1 =================
+# =====================================
+# CARD 1 - IFOOD
+# =====================================
 with link1:
 
     st.markdown("""
         <div style="
-            text-align:center;
-            padding:20px;
             border-radius:15px;
+            overflow:hidden;
             box-shadow:0px 0px 10px rgba(0,0,0,0.1);
             background-color:#fafafa;
         ">
     """, unsafe_allow_html=True)
 
+    # IMAGEM
     st.markdown("""
-        <div style="text-align:center;">
-            <img src="data:image/png;base64,{}"
-                 style="
-                    width:250px;
-                    height:180px;
-                    object-fit:cover;
-                    border-radius:12px;
-                 ">
-        </div>
+        <img src="data:image/png;base64,{}"
+             style="
+                width:100%;
+                height:180px;
+                object-fit:cover;
+             ">
     """.format(get_base64_image("image_ifood.png")),
     unsafe_allow_html=True)
 
+    # CONTEÚDO
     st.markdown("""
-        <h3 style="text-align:center; margin-top:15px;">
-            iFood
-        </h3>
+        <div style="padding:20px;">
 
-        <p style="
-            text-align:justify;
-            font-size:16px;
-            line-height:1.6;
-        ">
-            O iFood é uma plataforma de delivery que conecta
-            restaurantes, mercados e consumidores, permitindo
-            pedidos online de forma rápida e prática.
-        </p>
+            <h3 style="text-align:center;">
+                iFood
+            </h3>
 
-        <div style="text-align:center; margin-top:15px;">
-            <a href="https://portal.ifood.com.br/login"
-               target="_blank"
-               style="
-                    font-size:20px;
-                    text-decoration:none;
-                    font-weight:bold;
-               ">
-                Acessar iFood
-            </a>
+            <p style="
+                text-align:justify;
+                font-size:16px;
+                line-height:1.6;
+            ">
+                O iFood é uma plataforma de delivery que conecta
+                restaurantes, mercados e consumidores,
+                oferecendo praticidade nos pedidos online.
+            </p>
+
+            <div style="text-align:center; margin-top:15px;">
+                <a href="https://portal.ifood.com.br/login"
+                   target="_blank"
+                   style="
+                        font-size:20px;
+                        text-decoration:none;
+                        font-weight:bold;
+                   ">
+                    Acessar iFood
+                </a>
+            </div>
+
+        </div>
         </div>
     """, unsafe_allow_html=True)
 
-    st.markdown("</div>", unsafe_allow_html=True)
-
-# ================= LINK 2 =================
+# =====================================
+# CARD 2 - FACEBOOK
+# =====================================
 with link2:
 
     st.markdown("""
         <div style="
-            text-align:center;
-            padding:20px;
             border-radius:15px;
+            overflow:hidden;
             box-shadow:0px 0px 10px rgba(0,0,0,0.1);
             background-color:#fafafa;
         ">
     """, unsafe_allow_html=True)
 
+    # IMAGEM
     st.markdown("""
-        <div style="text-align:center;">
-            <img src="data:image/png;base64,{}"
-                 style="
-                    width:250px;
-                    height:180px;
-                    object-fit:cover;
-                    border-radius:12px;
-                 ">
-        </div>
+        <img src="data:image/png;base64,{}"
+             style="
+                width:100%;
+                height:180px;
+                object-fit:cover;
+             ">
     """.format(get_base64_image("image_facebook.jpg")),
     unsafe_allow_html=True)
 
+    # CONTEÚDO
     st.markdown("""
-        <h3 style="text-align:center; margin-top:15px;">
-            Facebook
-        </h3>
+        <div style="padding:20px;">
 
-        <p style="
-            text-align:justify;
-            font-size:16px;
-            line-height:1.6;
-        ">
-            O Facebook é uma rede social utilizada para compartilhar
-            fotos, vídeos, notícias e interagir com pessoas do mundo todo.
-        </p>
+            <h3 style="text-align:center;">
+                Facebook
+            </h3>
 
-        <div style="text-align:center; margin-top:15px;">
-            <a href="https://www.facebook.com/?locale=pt_BR"
-               target="_blank"
-               style="
-                    font-size:20px;
-                    text-decoration:none;
-                    font-weight:bold;
-               ">
-                Acessar Facebook
-            </a>
+            <p style="
+                text-align:justify;
+                font-size:16px;
+                line-height:1.6;
+            ">
+                O Facebook é uma rede social utilizada para
+                compartilhar fotos, vídeos e interagir
+                com pessoas do mundo todo.
+            </p>
+
+            <div style="text-align:center; margin-top:15px;">
+                <a href="https://www.facebook.com/?locale=pt_BR"
+                   target="_blank"
+                   style="
+                        font-size:20px;
+                        text-decoration:none;
+                        font-weight:bold;
+                   ">
+                    Acessar Facebook
+                </a>
+            </div>
+
+        </div>
         </div>
     """, unsafe_allow_html=True)
 
-    st.markdown("</div>", unsafe_allow_html=True)
-
-# ================= LINK 3 =================
+# =====================================
+# CARD 3 - NETFLIX
+# =====================================
 with link3:
 
     st.markdown("""
         <div style="
-            text-align:center;
-            padding:20px;
             border-radius:15px;
+            overflow:hidden;
             box-shadow:0px 0px 10px rgba(0,0,0,0.1);
             background-color:#fafafa;
         ">
     """, unsafe_allow_html=True)
 
+    # IMAGEM
     st.markdown("""
-        <div style="text-align:center;">
-            <img src="data:image/png;base64,{}"
-                 style="
-                    width:250px;
-                    height:180px;
-                    object-fit:cover;
-                    border-radius:12px;
-                 ">
-        </div>
+        <img src="data:image/png;base64,{}"
+             style="
+                width:100%;
+                height:180px;
+                object-fit:cover;
+             ">
     """.format(get_base64_image("image_netflix.jpg")),
     unsafe_allow_html=True)
 
+    # CONTEÚDO
     st.markdown("""
-        <h3 style="text-align:center; margin-top:15px;">
-            Netflix
-        </h3>
+        <div style="padding:20px;">
 
-        <p style="
-            text-align:justify;
-            font-size:16px;
-            line-height:1.6;
-        ">
-            A Netflix é uma plataforma de streaming que oferece
-            filmes, séries, documentários e conteúdos exclusivos
-            para entretenimento online.
-        </p>
+            <h3 style="text-align:center;">
+                Netflix
+            </h3>
 
-        <div style="text-align:center; margin-top:15px;">
-            <a href="https://www.netflix.com/br/"
-               target="_blank"
-               style="
-                    font-size:20px;
-                    text-decoration:none;
-                    font-weight:bold;
-               ">
-                Acessar Netflix
-            </a>
+            <p style="
+                text-align:justify;
+                font-size:16px;
+                line-height:1.6;
+            ">
+                A Netflix é uma plataforma de streaming
+                que oferece filmes, séries e documentários
+                para entretenimento online.
+            </p>
+
+            <div style="text-align:center; margin-top:15px;">
+                <a href="https://www.netflix.com/br/"
+                   target="_blank"
+                   style="
+                        font-size:20px;
+                        text-decoration:none;
+                        font-weight:bold;
+                   ">
+                    Acessar Netflix
+                </a>
+            </div>
+
+        </div>
         </div>
     """, unsafe_allow_html=True)
 
-    st.markdown("</div>", unsafe_allow_html=True)
-
-# =========================
+# =====================================
 # WHATSAPP
-# =========================
+# =====================================
 st.markdown(f"""
-    <div style="text-align: center; margin-top: 50px;">
+    <div style="text-align:center; margin-top:50px;">
         <a href="https://wa.me/5583987220076" target="_blank">
             <img src="data:image/png;base64,{zap_base64}" width="100">
         </a>
