@@ -12,13 +12,15 @@ def get_base64_image(path):
 img_base64 = get_base64_image("2875404.png")
 zap_base64 = get_base64_image("images (1).jpeg")
 
+# =========================
 # TOPO (imagem clicável)
+# =========================
 col1, col2, col3 = st.columns([1,2,1])
 
 with col2:
     st.markdown(f"""
         <div style="text-align: center; margin-bottom: 50px;">
-            <a href="https://www.google.com/url?sa=i&source=web&rct=j&url=https://www.google.com/?hl%3Dpt_BR&ved=2ahUKEwiut5LzxbaUAxUjgWEGHShuGCsQy_kOegoIAggACAEIBRAC&opi=89978449&cd&psig=AOvVaw3Bsg2sss2Nx2vVUr8WJREI&ust=1778771379879000" target="_blank">
+            <a href="https://www.google.com" target="_blank">
                 <img src="data:image/png;base64,{img_base64}" 
                      width="320" 
                      style="border-radius:12px;">
@@ -26,10 +28,13 @@ with col2:
         </div>
     """, unsafe_allow_html=True)
 
+# =========================
 # LAYOUT PRINCIPAL
+# =========================
 col_left, col_right = st.columns([3,1])
 
 with col_left:
+
     st.markdown("""
     <div style='margin-bottom:30px; font-size:30px;'>
         <b>Nome Cleyton Silva</b>
@@ -39,19 +44,12 @@ with col_left:
     # subcolunas
     subcol1, subcol2 = st.columns([1,4])
 
-    # IMAGEM (centralizada verticalmente)
+    # IMAGEM
     with subcol1:
-        st.markdown("""
-        <div style="
-            display: flex;
-            align-items: center;
-            height: 100%;
-        ">
-        """, unsafe_allow_html=True)
-
-        st.image("WhatsApp Image 2026-04-15 at 11.17.27 AM.png", width=800)
-
-        st.markdown("</div>", unsafe_allow_html=True)
+        st.image(
+            "WhatsApp Image 2026-04-15 at 11.17.27 AM.png",
+            width=250
+        )
 
     # TEXTO
     with subcol2:
@@ -60,24 +58,82 @@ with col_left:
             text-align: justify;
             font-size: 20px;
             line-height: 2.0;
-            width: 100%;
-            max-width: none;
         ">
-            <b>Sobre Cleyton:<br>
-          Olá,meu nome é Cleyton, sou da cidade de Gurinhém PB, tenho 18 anos e estou no terceiro ano do curso de Informática do IFPB Campus Itabaiana.
+            <b>Sobre Cleyton:</b><br><br>
+
+            Olá, meu nome é Cleyton, sou da cidade de Gurinhém PB,
+            tenho 18 anos e estou no terceiro ano do curso de
+            Informática do IFPB Campus Itabaiana.
         </div>
         """, unsafe_allow_html=True)
 
-    st.markdown("<div style='margin-top:30px;'>", unsafe_allow_html=True)
-    st.link_button("Acessar", "https://sites.google.com/academico.ifpb.edu.br/cleyton-alves-da-silva/in%C3%ADcio")
-    st.markdown("</div>", unsafe_allow_html=True)
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    st.link_button(
+        "Acessar",
+        "https://sites.google.com/academico.ifpb.edu.br/cleyton-alves-da-silva/in%C3%ADcio"
+    )
 
 with col_right:
     st.empty()
 
-# 🔥 NOVO BLOCO (WhatsApp clicável no final)
+# ==================================================
+# NOVA SEÇÃO - 3 LINKS COM IMAGENS
+# ==================================================
+
+st.markdown("""
+    <hr style="margin-top:50px; margin-bottom:40px;">
+    <h2 style='text-align:center;'>
+        Meus Sites Favoritos
+    </h2>
+""", unsafe_allow_html=True)
+
+link1, link2, link3 = st.columns(3)
+
+# ================= LINK 1 =================
+with link1:
+
+    st.image("imagem1.png", width=250)
+
+    st.markdown("""
+        <div style="text-align:center; margin-top:10px;">
+            <a href="https://site1.com" target="_blank">
+                Clique para acessar o Site 1
+            </a>
+        </div>
+    """, unsafe_allow_html=True)
+
+# ================= LINK 2 =================
+with link2:
+
+    st.image("imagem2.png", width=250)
+
+    st.markdown("""
+        <div style="text-align:center; margin-top:10px;">
+            <a href="https://site2.com" target="_blank">
+                Clique para acessar o Site 2
+            </a>
+        </div>
+    """, unsafe_allow_html=True)
+
+# ================= LINK 3 =================
+with link3:
+
+    st.image("imagem3.png", width=250)
+
+    st.markdown("""
+        <div style="text-align:center; margin-top:10px;">
+            <a href="https://site3.com" target="_blank">
+                Clique para acessar o Site 3
+            </a>
+        </div>
+    """, unsafe_allow_html=True)
+
+# =========================
+# WHATSAPP
+# =========================
 st.markdown(f"""
-    <div style="text-align: center; margin-top: 10px;">
+    <div style="text-align: center; margin-top: 50px;">
         <a href="https://wa.me/5583987220076" target="_blank">
             <img src="data:image/png;base64,{zap_base64}" width="100">
         </a>
