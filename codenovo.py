@@ -99,37 +99,30 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # =====================================
-# COLUNAS DOS CARDS
+# COLUNAS
 # =====================================
 link1, link2, link3 = st.columns(3)
 
 # =====================================
-# CARD 1 - IFOOD
+# CARD 1
 # =====================================
 with link1:
 
-    st.markdown("""
-        <div style="
-            border-radius:15px;
-            overflow:hidden;
-            box-shadow:0px 0px 10px rgba(0,0,0,0.1);
-            background-color:#fafafa;
-        ">
-    """, unsafe_allow_html=True)
+    st.markdown(f"""
+    <div style="
+        border-radius:15px;
+        overflow:hidden;
+        box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+        background-color:#fafafa;
+    ">
 
-    # IMAGEM
-    st.markdown("""
-        <img src="data:image/png;base64,{}"
+        <img src="data:image/png;base64,{get_base64_image('image_ifood.png')}"
              style="
                 width:100%;
                 height:180px;
                 object-fit:cover;
              ">
-    """.format(get_base64_image("image_ifood.png")),
-    unsafe_allow_html=True)
 
-    # CONTEÚDO
-    st.markdown("""
         <div style="padding:20px;">
 
             <h3 style="text-align:center;">
@@ -143,7 +136,7 @@ with link1:
             ">
                 O iFood é uma plataforma de delivery que conecta
                 restaurantes, mercados e consumidores,
-                oferecendo praticidade nos pedidos online.
+                permitindo pedidos online de forma rápida e prática.
             </p>
 
             <div style="text-align:center; margin-top:15px;">
@@ -159,36 +152,29 @@ with link1:
             </div>
 
         </div>
-        </div>
+    </div>
     """, unsafe_allow_html=True)
 
 # =====================================
-# CARD 2 - FACEBOOK
+# CARD 2
 # =====================================
 with link2:
 
-    st.markdown("""
-        <div style="
-            border-radius:15px;
-            overflow:hidden;
-            box-shadow:0px 0px 10px rgba(0,0,0,0.1);
-            background-color:#fafafa;
-        ">
-    """, unsafe_allow_html=True)
+    st.markdown(f"""
+    <div style="
+        border-radius:15px;
+        overflow:hidden;
+        box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+        background-color:#fafafa;
+    ">
 
-    # IMAGEM
-    st.markdown("""
-        <img src="data:image/png;base64,{}"
+        <img src="data:image/png;base64,{get_base64_image('image_facebook.jpg')}"
              style="
                 width:100%;
                 height:180px;
                 object-fit:cover;
              ">
-    """.format(get_base64_image("image_facebook.jpg")),
-    unsafe_allow_html=True)
 
-    # CONTEÚDO
-    st.markdown("""
         <div style="padding:20px;">
 
             <h3 style="text-align:center;">
@@ -218,36 +204,29 @@ with link2:
             </div>
 
         </div>
-        </div>
+    </div>
     """, unsafe_allow_html=True)
 
 # =====================================
-# CARD 3 - NETFLIX
+# CARD 3
 # =====================================
 with link3:
 
-    st.markdown("""
-        <div style="
-            border-radius:15px;
-            overflow:hidden;
-            box-shadow:0px 0px 10px rgba(0,0,0,0.1);
-            background-color:#fafafa;
-        ">
-    """, unsafe_allow_html=True)
+    st.markdown(f"""
+    <div style="
+        border-radius:15px;
+        overflow:hidden;
+        box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+        background-color:#fafafa;
+    ">
 
-    # IMAGEM
-    st.markdown("""
-        <img src="data:image/png;base64,{}"
+        <img src="data:image/png;base64,{get_base64_image('image_netflix.jpg')}"
              style="
                 width:100%;
                 height:180px;
                 object-fit:cover;
              ">
-    """.format(get_base64_image("image_netflix.jpg")),
-    unsafe_allow_html=True)
 
-    # CONTEÚDO
-    st.markdown("""
         <div style="padding:20px;">
 
             <h3 style="text-align:center;">
@@ -277,7 +256,7 @@ with link3:
             </div>
 
         </div>
-        </div>
+    </div>
     """, unsafe_allow_html=True)
 
 # =====================================
