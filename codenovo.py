@@ -81,8 +81,6 @@ with col_right:
 # SEÇÃO - SITES PARCEIROS
 # ==================================================
 st.markdown("""
-    <hr style="margin-top:50px; margin-bottom:30px;">
-
     <h2 style='
         text-align:center;
         font-size:38px;
