@@ -93,11 +93,11 @@ link1, link2, link3 = st.columns(3)
 # ================= LINK 1 =================
 with link1:
 
-    st.image("imagem1.png", width=250)
+    st.image("image_ifood.png", width=250)
 
     st.markdown("""
         <div style="text-align:center; margin-top:10px;">
-            <a href="https://site1.com" target="_blank">
+            <a href="https://portal.ifood.com.br/login" target="_blank">
                 Clique para acessar o Site 1
             </a>
         </div>
@@ -106,11 +106,11 @@ with link1:
 # ================= LINK 2 =================
 with link2:
 
-    st.image("imagem2.png", width=250)
+    st.image("image_facebook.jpg", width=250)
 
     st.markdown("""
         <div style="text-align:center; margin-top:10px;">
-            <a href="https://site2.com" target="_blank">
+            <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
                 Clique para acessar o Site 2
             </a>
         </div>
@@ -119,11 +119,11 @@ with link2:
 # ================= LINK 3 =================
 with link3:
 
-    st.image("imagem3.png", width=250)
+    st.image("image_netflix.jpg", width=250)
 
     st.markdown("""
         <div style="text-align:center; margin-top:10px;">
-            <a href="https://site3.com" target="_blank">
+            <a href="https://www.netflix.com/br/" target="_blank">
                 Clique para acessar o Site 3
             </a>
         </div>
